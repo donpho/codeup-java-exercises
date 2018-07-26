@@ -30,12 +30,12 @@ public class ControlFlowExercises {
         }
         while(count <= 100);
 
-        int x = 2;
-        do{
-            System.out.println(x);
-            x*=x;
-        }
-        while(x<1000000);
+//        int x = 2;
+//        do{
+//            System.out.println(x);
+//            x*=x;
+//        }
+//        while(x<1000000);
 
         System.out.print("What number would you like to go up to?");
         int input = sc.nextInt();
