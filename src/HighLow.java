@@ -3,13 +3,13 @@ import java.util.Scanner;
 
 public class HighLow {
     static Scanner sc = new Scanner(System.in);
-    static Random rand = new Random();
 
     public static void main(String[] args) {
         game();
     }
 
     public static void game(){
+        Random rand = new Random();
         int guessMe = rand.nextInt(100)+1;
         boolean play = true;
         int count = 0;
@@ -17,7 +17,7 @@ public class HighLow {
         do{
             int guess = sc.nextInt();
             if(guess == guessMe){
-                System.out.println("GOOD GUESS!");
+                System.out.println("GOOD GUESS!\nYou got the right number after "+count+" guesses!");
                 play = playAgain();
             }
             else if(count == 10){
