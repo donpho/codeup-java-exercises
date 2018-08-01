@@ -3,14 +3,19 @@ package util.shapes;
 public class Rectangle {
     private int perimeter;
     private int area;
+    private int length;
+    private int width;
 
-    public int getArea(int length, int width) {
-        this.area = length * width;
-        return area;
+    public Rectangle(int length,int width) {
+        this.length = length;
+        this.width = width;
     }
 
-    public int getPerimeter(int length, int width) {
-        this.perimeter = (2 * length) + (2 * width);
-        return perimeter;
+    public int getArea() {
+         return this.area = length * width;
+    }
+
+    public int getPerimeter() {
+        return this.perimeter = (2 * length) + (2 * width);
     }
 }
