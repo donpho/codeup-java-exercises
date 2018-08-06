@@ -26,10 +26,10 @@ public class Input {
         return value;
     }
 
-    public int getInt(){
-        int prompt = scanner.nextInt();
-        return prompt;
-    }
+//    public int getInt(){
+//        int value = scanner.nextInt();
+//        return value;
+//    }
 
     public double getDouble(double min, double max){
         System.out.println("Please enter a number between " + min + " and " + max + ".");
@@ -40,9 +40,63 @@ public class Input {
         return value;
     }
 
+//    public double getDouble(){
+//        double prompt = scanner.nextDouble();
+//        return prompt;
+//    }
+
+    public int getInt(){
+        while(true){
+            String input = scanner.next();
+            try{
+                Integer.valueOf(input);
+                return Integer.valueOf(input);
+            }
+            catch (NumberFormatException e){
+                System.out.println("Sorry but that is not a valid integer!\n" +
+                        "Please try again!");
+            }
+        }
+    }
+
     public double getDouble(){
-        double prompt = scanner.nextDouble();
-        return prompt;
+        while(true){
+            String input = scanner.next();
+            try{
+                Double.valueOf(input);
+                return Double.valueOf(input);
+            }
+            catch (NumberFormatException e){
+                System.out.println("Sorry but that is not a valid number!\n" +
+                        "Please try again!");
+            }
+        }
+    }
+
+    public int getBinary(){
+        while(true){
+            String input = scanner.next();
+            try {
+                return Integer.parseInt(input,2);
+            }
+            catch (NumberFormatException e){
+                System.out.println("Sorry but that is not a valid binary number!\n" +
+                        "Please try again!");
+            }
+        }
+    }
+
+    public int getHex(){
+        while(true){
+            String input = scanner.next();
+            try {
+                return Integer.parseInt(input,16);
+            }
+            catch (NumberFormatException e){
+                System.out.println("Sorry but that is not a valid hexidecimal number!\n" +
+                        "Please try again!");
+            }
+        }
     }
 
 }
