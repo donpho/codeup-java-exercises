@@ -47,7 +47,7 @@ public class Input {
 
     public int getInt(){
         while(true){
-            String input = scanner.next();
+            String input = getString();
             try{
                 Integer.valueOf(input);
                 return Integer.valueOf(input);
@@ -61,7 +61,7 @@ public class Input {
 
     public double getDouble(){
         while(true){
-            String input = scanner.next();
+            String input = getString();
             try{
                 Double.valueOf(input);
                 return Double.valueOf(input);
@@ -75,9 +75,8 @@ public class Input {
 
     public int getBinary(){
         while(true){
-            String input = scanner.next();
             try {
-                return Integer.parseInt(input,2);
+                return Integer.parseInt(getString(),2);
             }
             catch (NumberFormatException e){
                 System.out.println("Sorry but that is not a valid binary number!\n" +
@@ -88,9 +87,8 @@ public class Input {
 
     public int getHex(){
         while(true){
-            String input = scanner.next();
             try {
-                return Integer.parseInt(input,16);
+                return Integer.parseInt(getString(),16);
             }
             catch (NumberFormatException e){
                 System.out.println("Sorry but that is not a valid hexidecimal number!\n" +
