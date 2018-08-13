@@ -33,7 +33,6 @@ public class GradesApplication {
         if(students.containsKey(userInput)){
             System.out.println("Name: " + students.get(userInput).getName() + " - Github Username: " + userInput);
 
-
             System.out.println( "Current Average: " + students.get(userInput).getGradeAverage());
 
         }
